@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Antares Snake</title>
+    <meta name="description" content="A browser-playable Snake-style game made with JavaScript.">
+    <link rel="stylesheet" href="snake.css">
+  </head>
+  <body>
+    <main class="game-page">
+      <section class="game-shell" aria-labelledby="game-title">
+        <div class="game-info">
+          <a class="back-link" href="https://matheus.antares.ninja">Antares</a>
+          <p class="eyebrow">Browser arcade</p>
+          <h1 id="game-title">Antares Snake</h1>
+          <p class="intro">
+            Guide the comet trail through the grid, collect star cores, and keep
+            the tail from folding back into itself.
+          </p>
+
+          <div class="stats" aria-label="Game statistics">
+            <div>
+              <span>Score</span>
+              <strong id="score">0</strong>
+            </div>
+            <div>
+              <span>Best</span>
+              <strong id="bestScore">0</strong>
+            </div>
+            <div>
+              <span>Speed</span>
+              <strong id="speed">1x</strong>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button id="startButton" type="button">Start</button>
+            <button id="pauseButton" type="button">Pause</button>
+            <button id="resetButton" type="button">Reset</button>
+          </div>
+        </div>
+
+        <div class="board-wrap">
+          <canvas id="gameCanvas" width="560" height="560" aria-label="Snake game board"></canvas>
+          <div class="message" id="message" aria-live="polite">
+            Press Start or Space
+          </div>
+        </div>
+
+        <div class="control-pad" aria-label="Touch controls">
+          <button class="pad-button up" type="button" data-direction="up" aria-label="Move up">▲</button>
+          <button class="pad-button left" type="button" data-direction="left" aria-label="Move left">◀</button>
+          <button class="pad-button right" type="button" data-direction="right" aria-label="Move right">▶</button>
+          <button class="pad-button down" type="button" data-direction="down" aria-label="Move down">▼</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="snake.js"></script>
+  </body>
+</html>
